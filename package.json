@@ -1,0 +1,14 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "Practice with JSON API with NodeJS and MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elijah Lance Catli",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
