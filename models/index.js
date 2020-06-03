@@ -1,0 +1,13 @@
+const mongoose = require("mongoose");
+mongoose.set("debug", true);
+
+const uri =
+	"mongodb+srv://Lance:admin@todo-list-app-cluster-0xay8.azure.mongodb.net/test?retryWrites=true&w=majority";
+
+mongoose.connect(uri, {
+	useNewUrlParser: true,
+	useCreateIndex: true,
+	useUnifiedTopology: true,
+});
+
+mongoose.Promise = Promise;
