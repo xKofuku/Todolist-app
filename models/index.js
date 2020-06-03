@@ -11,3 +11,5 @@ mongoose.connect(uri, {
 });
 
 mongoose.Promise = Promise;
+
+module.exports.Todo = require("./todo");
