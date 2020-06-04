@@ -1,6 +1,11 @@
 let express = require("express");
-app = express();
-port = process.env.PORT || 3000;
+let bodyParser = require("body-parser");
+
+let app = express();
+let port = process.env.PORT || 3000;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //Routes
 let todoRoutes = require("./routes/todos");
