@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+let mongoose = require("mongoose");
 
 let todoSchema = new mongoose.Schema({
 	name: {
