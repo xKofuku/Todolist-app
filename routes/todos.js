@@ -1,25 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
+let helpers = require("../helpers/todos");
 
-router.get("/", function (req, res) {
-	db.Todo.find()
-		.then(function (todos) {
-			res.json(todos);
-		})
-		.catch(function (err) {
-			res.send(err);
-		});
-});
+router.get("/").get(helpers.getTodos).post(helpers.getTodos);
 
-router.post("/", function (req, res) {
-	db.Todo.create(req.body)
-		.then(function (newTodo) {
-			res.status(201).json(newTodo);
-		})
-		.catch(function (err) {
-			res.send(err);
-		});
-});
+router
+	.route("/:todoId")
+	.get(helpers.getTodo)
+	.put(helpers.updateTodo)
+	.delete(helpers.deleteTodo);
+
 
 module.exports = router;
