@@ -1,7 +1,7 @@
 let mongoose = require("mongoose");
 mongoose.set("debug", true);
 const uri =
-	"mongodb+srv://Lance:<password>@todo-list-app-cluster.0xay8.azure.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+	"mongodb+srv://Lance:admin@todo-list-app-cluster.0xay8.azure.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 mongoose.connect(uri, {
 	useNewUrlParser: true,
